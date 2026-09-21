@@ -3,41 +3,46 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+
     <parent>
         <groupId>com.sonnet.parent</groupId>
         <artifactId>maven-user</artifactId>
         <version>1.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
 
     <groupId>com.sonnet.dao</groupId>
     <artifactId>maven-user-dao</artifactId>
 
-    <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
+        <properties>
+            <user.username>sonnet</user.username>
+            <user.age>19</user.age>
+            <user.address>USA</user.address>
+        </properties>
 
     <dependencies>
-        <!--pojo子模块-->
         <dependency>
             <groupId>com.sonnet.parent</groupId>
             <artifactId>maven-user-pojo</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <scope>compile</scope>
-        </dependency>
-
-        <!--utils子模块-->
-        <dependency>
-            <groupId>com.sonnet.utils</groupId>
-            <artifactId>maven-user-utills</artifactId>
-            <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>com.sonnet.utils</groupId>
             <artifactId>maven-user-utills</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>commons-dbutils</groupId>
+            <artifactId>commons-dbutils</artifactId>
         </dependency>
     </dependencies>
+
+    <build>
+        <resources>
+            <resource>
+                <!--指定读取到的数据存放在哪里-->
+                <directory>${project.basedir}/src/main/resources</directory>
+                <!--开启对properties标签中数据的读取操作-->
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+    </build>
 </project>
