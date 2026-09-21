@@ -1,13 +1,12 @@
 <%--
   Created by IntelliJ IDEA.
   User: sonnet
-  Date: 2026/9/20
-  Time: 19:44
+  Date: 2026/9/21
+  Time: 13:06
   To change this template use File | Settings | File Templates.
-  isELIgnored="false" 不要忽略el表达式
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>list</title>
